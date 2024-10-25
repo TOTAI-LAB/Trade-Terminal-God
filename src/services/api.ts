@@ -3,7 +3,7 @@ import { ChatRequest, ChatResponse, SessionResponse } from '../types/chat';
 export const chatApi = {
   async startSession(): Promise<SessionResponse> {
     try {
-      const response = await fetch('http://localhost:8000/api/start-session', {
+      const response = await fetch('https://tot-ai-backend.onrender.com/api/start-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ export const chatApi = {
 
   async sendMessage(request: ChatRequest): Promise<ChatResponse> {
     try {
-      const response = await fetch('http://localhost:8000/api/chat', {
+      const response = await fetch('https://tot-ai-backend.onrender.com/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
